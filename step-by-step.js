@@ -42,7 +42,7 @@ function goTourByPrefix(prefix) {
 		if (sy < 0) sy = 0
 		let height = parseInt(getComputedStyle(document.body).height) - window.innerHeight
 		if (sy > height) sy = height
-		window.scrollTo({ top: sy, behavior: "smooth" });
+		setTimeout(() => window.scrollTo({ top: sy, behavior: "smooth" }), 1);
 
 		const update = () => {
 			if (Math.abs(~~window.scrollY - ~~sy) < 2) {
